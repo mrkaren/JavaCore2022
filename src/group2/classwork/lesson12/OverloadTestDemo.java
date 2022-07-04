@@ -1,0 +1,9 @@
+package group2.classwork.lesson12;
+
+public class OverloadTestDemo {
+
+    public static void main(String[] args) {
+        OverloadTest overloadTest = new OverloadTest();
+        overloadTest.test();
+    }
+}

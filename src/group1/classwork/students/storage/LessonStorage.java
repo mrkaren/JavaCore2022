@@ -49,8 +49,8 @@ public class LessonStorage {
     public Lesson getLessonByIndex(int index) throws LessonNotFoundException {
         if (index >= 0 && index < size) {
             return array[index];
-        } else {
-            throw new LessonNotFoundException("Lesson with " + index + " index does not exists");
         }
+        throw new LessonNotFoundException("Lesson with " + index + " index does not exists");
+
     }
 }

@@ -1,17 +1,21 @@
 package group2.classwork.lesson19;
 
 
+import java.io.IOException;
+
 public class ExceptionDemo {
 
     public static void main(String[] args) {
+        try {
+            System.in.read();
+        } catch (IOException e) {
 
+        }
         try {
             printWithoutWhiteSpace(null);
-        } catch (NoWhiteSpaceException | NullPointerException |IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
+        } catch (Exception e) {
 
-        System.out.println("after method call");
+        }
 
     }
 

@@ -105,7 +105,7 @@ public class StudentDemo implements Commands {
                     student.setLesson(lesson);
                     System.out.println("lesson changed!");
                 } catch (LessonNotFoundException | NumberFormatException e) {
-                    System.out.println("Please input correct number or index!");
+                    System.out.println(e.getMessage());
                     changeStudentLessonName();
                 }
 

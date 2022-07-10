@@ -1,17 +1,17 @@
-package group2.classwork.students.storage;
+package group1.classwork.students.storage;
 
-import group2.classwork.students.model.Student;
+import group1.classwork.students.model.User;
 
-public class StudentStorage {
+public class UserStorage {
 
-    private Student[] array = new Student[10];
+    private User[] array = new User[10];
     private int size = 0;
 
-    public void add(Student student) {
+    public void add(User user) {
         if (size == array.length) {
             increaseArray();
         }
-        array[size++] = student;
+        array[size++] = user;
     }
 
 
@@ -22,7 +22,7 @@ public class StudentStorage {
     }
 
     private void increaseArray() {
-        Student[] temp = new Student[array.length + 10];
+        User[] temp = new User[array.length + 10];
         System.arraycopy(array, 0, temp, 0, size);
         array = temp;
     }
@@ -38,22 +38,17 @@ public class StudentStorage {
         }
     }
 
-    public void printStudentsByLessonName(String lessonName) {
-        for (int i = 0; i < size; i++) {
-            if (array[i].getLesson().equals(lessonName)) {
-                System.out.println(array[i]);
-            }
-        }
-    }
 
     public int getSize() {
         return size;
     }
 
-    public Student getStudentByIndex(int index) {
-        if (index < 0 || index >= size) {
-            return null;
+    public User getUserByEmail(String email) {
+        for (int i = 0; i < size; i++) {
+            if (array[i].getEmail().equals(email)) {
+                return array[i];
+            }
         }
-        return array[index];
+        return null;
     }
 }

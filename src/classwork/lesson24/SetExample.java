@@ -10,14 +10,11 @@ import java.util.TreeSet;
 public class SetExample {
 
     public static void main(String[] args) {
-        Set<String> hashSet = new LinkedHashSet<>();
+        Set<String> hashSet = new TreeSet<>();
 
-
-        hashSet.add("poxos");
-        hashSet.add("martiros");
-        hashSet.add("aram");
-        hashSet.add("babken");
-        hashSet.add("zaven");
+        hashSet.add("Արմեն");
+        hashSet.add("Zaven");
+        hashSet.add("Андрей");
         for (String s : hashSet) {
             System.out.println(s);
         }

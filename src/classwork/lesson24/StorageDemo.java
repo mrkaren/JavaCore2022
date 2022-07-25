@@ -9,6 +9,7 @@ public class StorageDemo {
     public static void main(String[] args) {
         Storage<Integer> intStorage = new Storage<>();
         intStorage.add(7);
+        Storage<Boolean> booleanStorage = new Storage<>();
 
         Storage<String> strStorage = new Storage<>();
 

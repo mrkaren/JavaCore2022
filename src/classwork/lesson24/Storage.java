@@ -1,7 +1,5 @@
 package classwork.lesson24;
 
-import java.io.Serializable;
-
 public class Storage<T> {
 
     private Object[] objects = new Object[10];
@@ -11,6 +9,7 @@ public class Storage<T> {
         if (size == objects.length) {
             extend();
         }
+        objects[size++] = obj;
     }
 
     public void print() {
